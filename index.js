@@ -23,5 +23,5 @@ button.addEventListener("click", restart);
 
 function restart() {
   document.getElementById("result").innerHTML = " ";
-  alert("Thank you for playing DEMO of the quiz!");
+  alert("Thank you for playing DEMO of the quiz! Stay tuned for the rest 😊");
 }
