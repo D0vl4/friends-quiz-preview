@@ -30,8 +30,12 @@ img {
 
 .question {
     position: absolute;
+    width: 300px;
+    text-align: center;
     transform: translateY(-140px);
     font-size: 20px;
+    background-color: #6d5872;
+    color: #fff;
 }
 
 .cover-one {
@@ -98,24 +102,23 @@ span {
 }
 
 .checkbox {
+    visibility: hidden;
     width: 20px;
     height: 20px;
     border-radius: 80%;
     color: #575757;
     background-color: #48f359;
     border: 2px solid #575757;
-    opacity: 0;
-    /* visibility: hidden; */
 }
 
 .checkbox-two {
+    visibility: hidden;
     width: 20px;
     height: 20px;
     border-radius: 80%;
     color: #575757;
     background-color: #ff725e;
     border: 2px solid #575757;
-    visibility: hidden;
 }
 
 #main-button:focus {
@@ -135,11 +138,18 @@ span {
 }
 
 #main-button:focus .checkbox {
-    /* visibility: visible; */
-    opacity: 1;
+    visibility: visible;
+}
+
+#main-button:active .checkbox {
+    visibility: visible;
 }
 
 #main-button-two:focus .checkbox-two {
+    visibility: visible;
+}
+
+#main-button-two:active .checkbox-two {
     visibility: visible;
 }
 
