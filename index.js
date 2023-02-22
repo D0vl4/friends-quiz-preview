@@ -1,19 +1,20 @@
 // script for correct answer
 
 const correct = document.getElementById("main-button");
-correct.addEventListener("click", saygood);
 
-function saygood() {
-  correct.setAttribute("main-button", "active");
+correct.addEventListener("click", function () {
+  correct.classList.toggle("clicked");
+  incorrect.classList.remove("clicked");
   document.getElementById("result").innerHTML = "Good job 😊";
-}
+});
 
 // Script for wrong answer
 
 const incorrect = document.getElementById("main-button-two");
 
 incorrect.addEventListener("click", function () {
-  incorrect.setAttribute("main-button-two", "active");
+  incorrect.classList.toggle("clicked");
+  correct.classList.remove("clicked");
   document.getElementById("result").innerHTML = "Awww, you got it wrong 😢";
 });
 

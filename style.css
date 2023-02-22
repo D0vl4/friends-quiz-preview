@@ -80,7 +80,6 @@ p {
     border-radius: 10px;
     background-color: white;
     border: 3px solid #575757;
-    cursor: pointer;
 }
 
 .answer-box {
@@ -101,45 +100,39 @@ span {
     transform: translateY(1px);
 }
 
-.checkbox {
+#checkbox {
     visibility: hidden;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 80%;
     color: #575757;
     background-color: #48f359;
     border: 2px solid #575757;
 }
 
-.checkbox-two {
+#checkbox-two {
     visibility: hidden;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 80%;
     color: #575757;
     background-color: #ff725e;
     border: 2px solid #575757;
 }
 
-#main-button:active,
-#main-button:focus {
+#main-button.clicked {
     background-color: #d9edff;
+}
+
+#main-button.clicked #checkbox {
     visibility: visible;
 }
 
-#main-button-two:active,
-#main-button-two:focus {
+#main-button-two.clicked {
     background-color: #ffc0b7;
-    visibility: visible;
 }
 
-#main-button:active .checkbox,
-#main-button:focus .checkbox {
-    visibility: visible;
-}
-
-#main-button-two:active .checkbox-two,
-#main-button-two:focus .checkbox-two {
+#main-button-two.clicked #checkbox-two {
     visibility: visible;
 }
 
