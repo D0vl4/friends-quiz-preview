@@ -25,5 +25,7 @@ button.addEventListener("click", restart);
 
 function restart() {
   document.getElementById("result").innerHTML = " ";
+  correct.classList.remove("clicked");
+  incorrect.classList.remove("clicked");
   alert("Thank you for playing DEMO of the quiz! Stay tuned for the rest 😊");
 }
