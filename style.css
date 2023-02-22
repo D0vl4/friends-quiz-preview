@@ -121,35 +121,25 @@ span {
     border: 2px solid #575757;
 }
 
+#main-button:active,
 #main-button:focus {
     background-color: #d9edff;
+    visibility: visible;
 }
 
-#main-button:active {
-    background-color: #d9edff;
-}
-
+#main-button-two:active,
 #main-button-two:focus {
     background-color: #ffc0b7;
+    visibility: visible;
 }
 
-#main-button-two:active {
-    background-color: #ffc0b7;
-}
-
+#main-button:active .checkbox,
 #main-button:focus .checkbox {
     visibility: visible;
 }
 
-#main-button:active .checkbox {
-    visibility: visible;
-}
-
+#main-button-two:active .checkbox-two,
 #main-button-two:focus .checkbox-two {
-    visibility: visible;
-}
-
-#main-button-two:active .checkbox-two {
     visibility: visible;
 }
 

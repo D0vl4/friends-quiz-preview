@@ -10,11 +10,11 @@ function saygood() {
 // Script for wrong answer
 
 const incorrect = document.getElementById("main-button-two");
-incorrect.addEventListener("click", saybad);
 
-function saybad() {
+incorrect.addEventListener("click", function () {
+  incorrect.classList.toggle("active");
   document.getElementById("result").innerHTML = "Awww, you got it wrong 😢";
-}
+});
 
 // Script for reset
 
