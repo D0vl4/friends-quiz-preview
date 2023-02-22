@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 img {
@@ -116,19 +117,19 @@ span {
     visibility: hidden;
 }
 
-#main-button:focus {
+#main-button:active {
     background-color: #d9edff;
 }
 
-#main-button-two:focus {
+#main-button-two:active {
     background-color: #ffc0b7;
 }
 
-#main-button:focus .checkbox {
+#main-button:active .checkbox {
     visibility: visible;
 }
 
-#main-button-two:focus .checkbox-two {
+#main-button-two:active .checkbox-two {
     visibility: visible;
 }
 
