@@ -1,42 +1,64 @@
-// script for correct answer
+let answerSelected = false; // Flag variable to track if the user has selected an answer
 
+// Script for correct answer
 const correct = document.getElementById("main-button");
 
 correct.addEventListener("click", function () {
-  correct.classList.toggle("clicked");
-  incorrect.classList.remove("clicked");
-  document.getElementById("result").innerHTML = "Good job 😊";
+  if (!answerSelected) {
+    // Check if an answer has not been selected yet
+    correct.classList.toggle("clicked");
+    incorrect.classList.remove("clicked");
+    answerSelected = true; // Set flag to true since an answer has been selected
+    document.getElementById("result").innerHTML = "Good job 😊";
+    document.getElementById("score").innerHTML = "Score: 1";
+    disableOptions(); // Disable other options since an answer has been selected
+  }
 });
 
 // Script for wrong answer
-
 const incorrect = document.getElementById("main-button-two");
 
 incorrect.addEventListener("click", function () {
-  incorrect.classList.toggle("clicked");
-  correct.classList.remove("clicked");
-  document.getElementById("result").innerHTML = "Awww, you got it wrong 😢";
+  if (!answerSelected) {
+    // Check if an answer has not been selected yet
+    incorrect.classList.toggle("clicked");
+    correct.classList.remove("clicked");
+    answerSelected = true; // Set flag to true since an answer has been selected
+    document.getElementById("result").innerHTML = "Awww, you got it wrong 😢";
+    document.getElementById("score").innerHTML = "Score: 0";
+    disableOptions(); // Disable other options since an answer has been selected
+  }
 });
 
 // Script for reset
-
 const button = document.getElementById("next-question");
 button.addEventListener("click", restart);
 
 function restart() {
-  document.getElementById("result").innerHTML = " ";
+  document.getElementById("result").innerHTML = "";
+  document.getElementById("score").innerHTML = "ㅤ";
   correct.classList.remove("clicked");
   incorrect.classList.remove("clicked");
-  document.getElementById("score").innerHTML = "ㅤ";
+  answerSelected = false; // Reset flag variable
+  enableOptions(); // Enable all options
   alert("Thank you for playing DEMO of the quiz! Stay tuned for the rest 😊");
 }
 
-// Script for the score
+// Disable other options
+function disableOptions() {
+  const options = document.querySelectorAll(".option");
+  options.forEach((option) => {
+    if (option !== correct && option !== incorrect) {
+      option.disabled = true;
+    }
+  });
+}
 
-correct.addEventListener("click", function () {
-  document.getElementById("score").innerHTML = "Score: 1";
-});
-
-incorrect.addEventListener("click", function () {
-  document.getElementById("score").innerHTML = "Score: 0";
-});
+// Enable all options
+function enableOptions() {
+  const options = document.querySelectorAll(".option");
+  options.forEach((option) => {
+    option.disabled = false;
+    option.classList.remove("clicked");
+  });
+}

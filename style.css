@@ -136,7 +136,8 @@ span {
     visibility: visible;
 }
 
-.paragraph {
+#answer-one,
+#answer-two {
     width: 152px;
     text-align: left;
     font-weight: 400;
