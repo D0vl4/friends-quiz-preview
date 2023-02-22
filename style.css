@@ -117,19 +117,28 @@ span {
     visibility: hidden;
 }
 
+#main-button:focus {
+    background-color: #d9edff;
+}
+
 #main-button:active {
     background-color: #d9edff;
+}
+
+#main-button-two:focus {
+    background-color: #ffc0b7;
 }
 
 #main-button-two:active {
     background-color: #ffc0b7;
 }
 
-#main-button:active .checkbox {
+
+#main-button:focus .checkbox {
     visibility: visible;
 }
 
-#main-button-two:active .checkbox-two {
+#main-button-two:focus .checkbox-two {
     visibility: visible;
 }
 
@@ -142,6 +151,7 @@ span {
 #result {
     position: absolute;
     font-size: 16px;
+    color: #575757;
     transform: translateY(145px);
 }
 
