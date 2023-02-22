@@ -27,5 +27,16 @@ function restart() {
   document.getElementById("result").innerHTML = " ";
   correct.classList.remove("clicked");
   incorrect.classList.remove("clicked");
+  document.getElementById("score").innerHTML = "ㅤ";
   alert("Thank you for playing DEMO of the quiz! Stay tuned for the rest 😊");
 }
+
+// Script for the score
+
+correct.addEventListener("click", function () {
+  document.getElementById("score").innerHTML = "Score: 1";
+});
+
+incorrect.addEventListener("click", function () {
+  document.getElementById("score").innerHTML = "Score: 0";
+});

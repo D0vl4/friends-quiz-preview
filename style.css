@@ -28,7 +28,7 @@ img {
     max-width: 100px;
 }
 
-.question {
+#score {
     position: absolute;
     width: 300px;
     text-align: center;
@@ -162,4 +162,11 @@ span {
     font-weight: 700;
     color: #fff;
     cursor: pointer;
+}
+
+#question-number {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 400;
+    transform: translateY(235px);
 }
