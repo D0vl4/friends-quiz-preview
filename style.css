@@ -94,7 +94,7 @@ span {
     font-size: 20px;
     font-weight: 700;
     color: #575757;
-    transform: translate(1px, 1px);
+    transform: translateY(1px);
 }
 
 .checkbox {
@@ -104,7 +104,8 @@ span {
     color: #575757;
     background-color: #48f359;
     border: 2px solid #575757;
-    visibility: hidden;
+    opacity: 0;
+    /* visibility: hidden; */
 }
 
 .checkbox-two {
@@ -133,9 +134,9 @@ span {
     background-color: #ffc0b7;
 }
 
-
 #main-button:focus .checkbox {
-    visibility: visible;
+    /* visibility: visible; */
+    opacity: 1;
 }
 
 #main-button-two:focus .checkbox-two {
